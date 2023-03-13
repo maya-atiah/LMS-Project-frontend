@@ -1,112 +1,126 @@
 .Teachercontainer {
   margin-left: 16vw;
   height: 70vh;
-  width: 55vw;
+  width: 900px;
 
   padding: 15px;
   flex-direction: column;
 }
-.titleTeacherAdd{
+.titleTeacherAdd {
   display: flex;
   justify-content: space-between;
-  
 }
-.titleTeacherAdd button{
+.titleTeacherAdd button {
   padding: 5px 15px;
   background-color: #017f94;
-  border: #EE8B3A 1px solid;
+  border: #ee8b3a 1px solid;
   border-radius: 20px;
   color: white;
-
-}.titleTeacherAdd button:hover{
+}
+.titleTeacherAdd button:hover {
   padding: 5px 15px;
-  background-color: #EE8B3A;
+  background-color: #ee8b3a;
   border: #017f94 1px solid;
   border-radius: 20px;
   color: white;
-
 }
-.titleTeacherAdd button:active{
+.titleTeacherAdd button:active {
   padding: 5px 15px;
   background-color: #017f94;
-  border: #EE8B3A 1px solid;
+  border: #ee8b3a 1px solid;
   border-radius: 20px;
   color: white;
-
 }
 .allTeachersSection {
   width: 100%;
   height: 100%;
 }
-.allTeachersTitle {
+.allTeachersTitle, .Addd {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
   margin-left: 4px;
   color: #017f94;
+
 }
 .Teachersline {
-  height: 2.5px;
+  height: 1px;
   width: 100%;
   background-color: #017f94;
   margin-top: 4px;
   margin-bottom: 30px;
 }
-.teacherCardsContainer {
+.TeacherCardsContainer {
   display: grid;
   grid-template-columns: auto auto auto;
 }
-.addingCourse{
+.addingCourse {
   cursor: pointer;
 }
-.course-title-input{
-  color:white;
+.course-title-input {
+  color: white;
 }
-.btn-add-teacher{
+.btn-add-teacher {
   background-color: white;
   border: 1px solid white;
-  color:white;
-  padding:0.2rem ;
+  color: white;
+  padding: 0.2rem;
   text-align: center;
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
-  width:8rem;
+  width: 8rem;
   display: block;
   border-radius: 10rem;
-  border: 2px solid #EE8B3A;
+  border: 2px solid #ee8b3a;
   background-color: transparent;
 }
-input[type=text] , input[type=password] ,input[type=mail]{
+input[type="text"],
+input[type="password"],
+input[type="mail"] {
   width: 13.6rem;
   padding: 0.5rem;
   margin: 8px 0;
   box-sizing: border-box;
-  border: 2px solid #EE8B3A;
+  border: 2px solid #ee8b3a;
   border-radius: 4px;
   background-color: transparent;
-  
 }
 
-input::placeholder{
-  color:white;
-  
-  
+input::placeholder {
+  color: white;
 }
-.input{
+.input {
   display: flex;
-  flex-direction:column ;
+  flex-direction: column;
 }
 
-.input-label-flex{
+.input-label-flex {
   width: 45vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-
-.alignAddTeacher{
+.alignAddTeacher {
   display: flex;
   justify-content: center;
   color: #017f94;
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .TeacherCardsContainer {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .TeacherCardsContainer {
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 3vw;
+  }
+}

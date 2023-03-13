@@ -43,9 +43,9 @@
   margin-bottom: 43vh;
   margin-left: 12vw;
   background: none;
-border-radius: 30%; 
-border:none;
+border: none; 
 }
+
 
 .deleteTeacherButtencontainer:hover {
   opacity: 90%;
@@ -57,39 +57,48 @@ border:none;
   margin-right: 10vw;
   width: 70px;
   height: 25px;
+  
+}
+.editButtonTeacher2 {
+  position: absolute;
+  margin-right: 10vw;
+  width: 70px;
+  height: 25px;
   border-radius: 20px;
   background-color: #EE8B3A;
   border: 0px;
   color: white;
 }
-.editButtonTeacher:hover {
+.editButtonTeacher2:hover {
   background-color: white;
   opacity: 90%;
   color: #EE8B3A;
   cursor: pointer;
   border: #EE8B3A 2px solid;
 }
-.editButtonTeacher:active {
+.editButtonTeacher2:active {
   background-color: #EE8B3A;
   opacity: 90%;
   color: white;
   cursor: pointer;
   border: white 2px solid;
 }
+@media only screen and (max-width: 1000px) {
 
-.allTeachersSection{
-  color:white;
+  .cardFrameTeacher {
+    width: 23vw;
+  }
+  .deleteTeacherButtencontainer {
+    margin-left: 18vw;
+  }
 }
 
-.img{
-  color:white;
-}
+@media only screen and (max-width: 650px) {
 
-.allTeachersSection{
-  color:white;
+  .cardFrameTeacher {
+    width: 40vw;
+  }
+  .deleteTeacherButtencontainer {
+    margin-left: 28vw;
+  }
 }
-
-.img{
-  color:white;
-}
-

@@ -1,5 +1,5 @@
 import axios from "axios";
-import "./StudentCard.css";
+// import "./StudentCard.css";
 import img from "./student2.png";
 import { IconButton} from "@mui/material";
 import { DeleteForeverRounded } from "@mui/icons-material";
