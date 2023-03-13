@@ -80,18 +80,7 @@ const addClass = async () => {
     // Find the grade object that matches the entered grade name
     const matchedGrade = classes.find((grade) => grade.name === name);
   
-    // Add the new section name to the sections array of the matched grade object
-    // matchedGrade.sections.push({ letter: sectionIds[0] });
-  
-    // Make a PUT request to update the existing grade object in the database
-    // axios.put('http://localhost:8000/api/grades', matchedGrade.sections)
-    //   .then(response => {
-    //     console.log(response.data); // Log the updated grade object
-    //     setclass([...classes]); // Update the state with the updated classes array
-    //   })
-    //   .catch(error => {
-    //     console.error(error);
-    //   });
+ 
 
     const b={
       "sectionIds[0]" : sectionIds[0]
@@ -140,6 +129,27 @@ const body = {
     addClass();
   
   };
+
+
+  const [grades, setGrades] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/grade")
+      .then((response) => response.json())
+      .then((data) => setGrades(data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  const [letters, setLetters] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/section")
+      .then((response) => response.json())
+      .then((data) => setLetters(data["All Sections"]))
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
     return (
     <>
       <Navhead />
@@ -177,6 +187,7 @@ const body = {
                   placeholder="Grade name"
                   onChange={(e) => setGrade(e.target.value)}
                 />
+                {/* 
                 <br></br>
                 <input
                   type="text"
@@ -185,7 +196,19 @@ const body = {
                   placeholder="Section"
                   onChange={(e) => setsection(e.target.value)}
                 />
-                <br></br>
+                <br></br> */}
+
+    
+    <br></br>
+             
+  <select  id="letter" name="letter" onChange={(e) => setsection(e.target.value)} className="my-select-student"> 
+  <option value="">-- Select a letter --</option>
+  {letters.map((letter, index) => (
+    <option key={index} value={letter.letter}>
+      {letter.letter}
+    </option>
+  ))}
+</select>
 
                 {!isPending && (
                   <button className="btn-add-course" onClick={submitHandler}>

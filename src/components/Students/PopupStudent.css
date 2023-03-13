@@ -1,4 +1,4 @@
-.popupCourse{
+.popupStudent{
     position:fixed;
     top:0;
     left:0;
@@ -13,7 +13,7 @@
 }
 
 
-.popup-inner{
+.popup-inner-student{
     position:relative;
     padding: 32px;
     width:100%;
@@ -22,7 +22,7 @@
     border-radius: 10px;
 }
 
-.popup-inner .close-course-btn{
+.popup-inner-student .close-student-btn{
     position: absolute;
     top:16px;
     right: 16px;

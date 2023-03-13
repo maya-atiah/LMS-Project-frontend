@@ -5,7 +5,7 @@ import "../../components/Students/Students.css"
 import axios from "axios";
 import Navhead from "../../components/Navhead";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect,Fragment } from "react";
 import PopupStudent from "./PopupStudent.jsx";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import Box from "@mui/material/Box";
@@ -75,6 +75,29 @@ ww      //  fetchallStudentByGradeSection ={fetchallStudentByGradeSection }
     />
   );
 });
+
+//grades and sections 
+  const [grades, setGrades] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/grade")
+      .then((response) => response.json())
+      .then((data) => setGrades(data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  const [letters, setLetters] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/section")
+      .then((response) => response.json())
+      .then((data) => setLetters(data["All Sections"]))
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  
 
 
 ///////////////////////////////////////////////////////////////
@@ -173,6 +196,8 @@ const handleGetStudent = () => {
   setTitle(gradeSection.name)
  
 };
+
+
   return (
     <>
       <Navhead />
@@ -181,7 +206,7 @@ const handleGetStudent = () => {
    <div className="component-container">
           <div className="course-title" onClick={() => setButtonPopup(true)}>
           <div>Students </div>
-          <div className='addingCourse'>
+          <div className='addingStudent'>
 
                 <AddCircleIcon /> Add Student
               <PopupStudent
@@ -248,52 +273,35 @@ const handleGetStudent = () => {
                   
                    
                   <br></br>
-                  {/* <input
-                        type="text"
-                        id="grade"
-                        name="grade" placeholder="Grade"
-                        onChange={(e) => setName(e.target.value)}
-                      /> */}
 
-<select id="grade" name="grade" onChange={(e) => setName(e.target.value)}  className="my-select">
+<select id="grade" name="grade" onChange={(e) => setName(e.target.value)} className="my-select-student">
   <option value="">-- Select section --</option>
-  <option value="Grade 1">Grade 1</option>
-  <option value="Grade 2">Grade 2</option>
-  <option value="Grade 3">Grade 3</option>
-  <option value="Grade 4">Grade 4</option>
-  <option value="Grade 5">Grade 5</option>
-  <option value="Grade 6">Grade 6</option>
-  <option value="Grade 7">Grade 7</option>
-  <option value="Grade 8">Grade 8</option>
-  <option value="Grade 9">Grade 9</option>
-  <option value="Grade 10">Grade 10</option>
-  <option value="Grade 11">Grade 11</option>
-  <option value="Grade 12">Grade 12</option>
+  {grades.map((grade) => (
+    <option key={grade.id} value={grade.name}>
+      {grade.name}
+    </option>
+  ))}
 </select>
     
     <br></br>
              
-
-<select id="letter" name="letter" onChange={(e) => setLetter(e.target.value)}  className="my-select">
-  <option value="">-- Select section --</option>
-  <option value="A">A</option>
-  <option value="B">B</option>
-  <option value="C">C</option>
-  <option value="D">D</option>
-  <option value="D">E</option>
-  <option value="D">F</option>
-  <option value="D">G</option>
-
-
+  <select  id="letter" name="letter" onChange={(e) => setLetter(e.target.value)} className="my-select-student"> 
+  <option value="">-- Select a letter --</option>
+  {letters.map((letter, index) => (
+    <option key={index} value={letter.letter}>
+      {letter.letter}
+    </option>
+  ))}
 </select>
+
    
                   {!isPending && (
-                    <button className="btn-add-teacher" onClick={submitHandler}>
+                    <button className="btn-add-student" onClick={submitHandler}>
                       Add
                     </button>
                   )}
                   {isPending && (
-                    <button className="btn-add-teacher" onClick={submitHandler}>
+                    <button className="btn-add-student" onClick={submitHandler}>
                       adding course
                       </button>
                      

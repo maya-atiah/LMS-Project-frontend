@@ -1,4 +1,4 @@
-.cardFrameTeacher {
+.cardFrameStudent{
     background-color: #017f94;
     width: 16vw;
     height: 50vh;
@@ -10,7 +10,7 @@
     flex-direction: column;
     overflow: hidden;
   }
-  .cardlineteachercard {
+  .cardlinestudentcard {
     height: 3px;
     width: 90%;
   
@@ -18,26 +18,26 @@
     margin: auto;
     margin-top: -20px;
   }
-  .cardFrameTeacher img {
+  .cardFrameStudent img {
     margin: auto;
     width: 90px;
     height: 90px;
   }
-  .TeacherCardContent {
+  .StudentCardContent {
     width: 100%;
     margin-bottom: 50px;
   }
-  .TeacherCardContent p {
+  .StudentCardContent p {
     padding-left: 15px;
     margin: 0px;
     margin-bottom: 5px;
   }
-  .pfpic {
+  .pfpicc {
     border: 2px solid;
     border-radius: 50%;
     padding: 5px;
   }
-  .deleteTeacherButtencontainer {
+  .deleteStudentButtencontainer {
     position: absolute;
     margin-bottom: 43vh;
     margin-left: 12vw;
@@ -45,33 +45,8 @@
   border-radius: 30%; 
   }
   
-  .deleteTeacherButtencontainer:hover {
+  .deleteStudentButtencontainer:hover {
     opacity: 90%;
   }
   
-  .editButtonTeacher {
-    position: absolute;
-    margin-top: 44vh;
-    margin-right: 10vw;
-    width: 70px;
-    height: 25px;
-    border-radius: 20px;
-    background-color: #EE8B3A;
-    border: 0px;
-    color: white;
-  }
-  .editButtonTeacher:hover {
-    background-color: white;
-    opacity: 90%;
-    color: #EE8B3A;
-    cursor: pointer;
-    border: #EE8B3A 2px solid;
-  }
-  .editButtonTeacher:active {
-    background-color: #EE8B3A;
-    opacity: 90%;
-    color: white;
-    cursor: pointer;
-    border: white 2px solid;
-  }
   

@@ -2,9 +2,9 @@ import "./PopupStudent.css";
 
 const PopupStudent = (props) => {
   return props.trigger ? (
-    <div className='popupCourse'>
-      <div className='popup-inner'>
-        <button className='close-course-btn' onClick={()=>(window.location.reload())}>
+    <div className='popupStudent'>
+      <div className='popup-inner-student'>
+        <button className='close-student-btn' onClick={()=>(window.location.reload())}>
           {""}
           close
          

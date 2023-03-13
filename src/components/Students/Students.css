@@ -1,65 +1,9 @@
-.Teachercontainer {
-    margin-left: 16vw;
-    height: 70vh;
-    width: 55vw;
-  
-    padding: 15px;
-    flex-direction: column;
-  }
-  .titleTeacherAdd{
-    display: flex;
-    justify-content: space-between;
-    
-  }
-  .titleTeacherAdd button{
-    padding: 5px 15px;
-    background-color: #017f94;
-    border: #EE8B3A 1px solid;
-    border-radius: 20px;
-    color: white;
-  
-  }.titleTeacherAdd button:hover{
-    padding: 5px 15px;
-    background-color: #EE8B3A;
-    border: #017f94 1px solid;
-    border-radius: 20px;
-    color: white;
-  
-  }
-  .titleTeacherAdd button:active{
-    padding: 5px 15px;
-    background-color: #017f94;
-    border: #EE8B3A 1px solid;
-    border-radius: 20px;
-    color: white;
-  
-  }
-  .allTeachersSection {
-    width: 100%;
-    height: 100%;
-  }
-  .allTeachersTitle {
-    margin-left: 4px;
-    color: #017f94;
-  }
-  .Teachersline {
-    height: 2.5px;
-    width: 100%;
-    background-color: #017f94;
-    margin-top: 4px;
-    margin-bottom: 30px;
-  }
-  .teacherCardsContainer {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-  .addingCourse{
+
+  .addingStudent{
     cursor: pointer;
   }
-  .course-title-input{
-    color:white;
-  }
-  .btn-add-teacher{
+ 
+  .btn-add-student{
     background-color: white;
     border: 1px solid white;
     color:white;
@@ -74,43 +18,7 @@
     border: 2px solid #EE8B3A;
     background-color: transparent;
   }
-  input[type=text] , input[type=password] ,input[type=mail]{
-    width: 13.6rem;
-    padding: 0.5rem;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #EE8B3A;
-    border-radius: 4px;
-    background-color: transparent;
-    
-  }
-  
-  input::placeholder{
-    color:white;
-    
-    
-  }
-  .input{
-    display: flex;
-    flex-direction:column ;
-  }
-  
-  .input-label-flex{
-    width: 45vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  
-  .alignAddTeacher{
-    display: flex;
-    justify-content: center;
-    color: #017f94;
-    cursor: pointer;
-  }
-  
-  .my-select{
+  .my-select-student{
     font-size: 16px;
     padding: 10px;
     border: 2px solid #EE8B3A;
